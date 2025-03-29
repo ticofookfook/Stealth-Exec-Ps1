@@ -1,6 +1,3 @@
-Baseado no seu sucesso com a técnica do BITS Admin, vou sugerir algumas atualizações para o seu README.md do GitHub, mantendo a maior parte da estrutura mas adicionando detalhes sobre a técnica que realmente funcionou:
-
-```markdown
 # Técnica de Execução Stealth para Scripts PowerShell
 
 Este repositório demonstra técnicas avançadas para executar scripts PowerShell de maneira furtiva, contornando controles de segurança comuns. A implementação utiliza binários legítimos do Windows, transferência de arquivos em segundo plano e ofuscação para evitar detecção.
