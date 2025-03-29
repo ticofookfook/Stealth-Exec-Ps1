@@ -6,6 +6,10 @@ Este repositório demonstra uma técnica avançada de stealth para execução de
 
 Esta técnica aproveita o regsvr32.exe, um binário legítimo do Windows, para carregar e executar um arquivo scriptlet (.sct) hospedado remotamente que contém código JavaScript ofuscado. Este código então executa comandos PowerShell de maneira altamente evasiva.
 
+## Gerar o c2 em ps1
+
+https://github.com/ticofookfook/C2-polimorfico
+
 ## Componentes
 
 ### 1. Atalho na Área de Trabalho
